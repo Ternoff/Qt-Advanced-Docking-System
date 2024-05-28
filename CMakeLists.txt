@@ -29,8 +29,8 @@ endif()
 
 project(QtADS LANGUAGES CXX VERSION ${VERSION_SHORT})
 
-option(BUILD_STATIC "Build the static library" OFF)
-option(BUILD_EXAMPLES "Build the examples" ON)
+option(ADS_BUILD_STATIC "Build the static library" OFF)
+option(ADS_BUILD_EXAMPLES "Build the examples" ON)
 
 if("${CMAKE_SIZEOF_VOID_P}" STREQUAL "4")
     set(ads_PlatformDir "x86")
