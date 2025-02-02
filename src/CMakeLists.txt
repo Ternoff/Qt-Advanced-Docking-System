@@ -138,6 +138,10 @@ if(ADS_INSTALL)
         ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
         INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/${library_name}
     )
+    install(FILES
+        $<TARGET_PDB_FILE:${library_name}>
+        TYPE BIN
+    )
 
     install(EXPORT adsTargets
         FILE adsTargets.cmake
